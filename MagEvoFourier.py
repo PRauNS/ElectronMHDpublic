@@ -686,18 +686,18 @@ y_array = y[0,:,0] #array of y grid points
 z_array = z[0,0,:] #array of z grid points
 
 # Coefficients/background structure fields
-n_e = dist.Field(name='n_e', bases=(ybasis,zbasis)) #electron number density in fm^{-3}. Only depends on r
-n_ebarInv = dist.Field(name='n_ebarInv', bases=(ybasis,zbasis)) #electron number density in reduced units. Only depends on r
-mu_e = dist.Field(name='mu_e', bases=(ybasis,zbasis)) #electron chemical potential in MeV. Depends on r and theta through B-dependence, so define over entire basis
+n_e = dist.Field(name='n_e', bases=(ybasis,zbasis)) #electron number density in fm^{-3}.
+n_ebarInv = dist.Field(name='n_ebarInv', bases=(ybasis,zbasis)) #electron number density in reduced units.
+mu_e = dist.Field(name='mu_e', bases=(ybasis,zbasis)) #electron chemical potential in MeV.
 mu_e2 = dist.Field(name='mu_e2', bases=(xbasis,ybasis,zbasis)) #copy of mu_e; only used to take gradient of in equations of motion
 mu_e.change_scales(dealias)
 mu_e2.change_scales(dealias)
 n_e.change_scales(dealias)
 n_ebarInv.change_scales(dealias)
 
-n_ei = dist.Field(name='n_ei', bases=(ybasis,zbasis)) #electron number density in fm^{-3}. Only depends on r
+n_ei = dist.Field(name='n_ei', bases=(ybasis,zbasis)) #electron number density in fm^{-3}. 
 n_ei.change_scales(dealias)
-n_ebarInvi = dist.Field(name='n_ebarInvi', bases=(ybasis,zbasis)) #electron number density in reduced units. Only depends on r
+n_ebarInvi = dist.Field(name='n_ebarInvi', bases=(ybasis,zbasis)) #electron number density in reduced units.
 n_ebarInvi.change_scales(dealias)
 
 mu_e['g'] = mu_eConst*( 1 + nu_0*np.cos(2*np.pi*p_n0*z/Lz) ) #electron chemical potential in MeV
