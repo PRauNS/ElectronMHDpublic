@@ -171,7 +171,7 @@ def Omega_xyLowTFixedT(eB,mu,M,T,n_max):
     
     dPdB0 = 1/(2*np.pi**2)*( 0.5*mu*p_F - 0.5*M**2*np.log( (mu+p_F)/M ) + np.pi**2/6*mu/p_F*T**2 + 7*np.pi**4/120*mu*M**2/p_F**5*T**4 )
     d2PdB20 = 0
-    d2PdBdmu0 = 1/(2*np.pi**2)*( p_F - np.pi**2/6*mu*M**2/p_F**3*T**2 - 7*np.pi**4/120*M**2*(4*mu**4+M**2)/p_F**7*T**4 )
+    d2PdBdmu0 = 1/(2*np.pi**2)*( p_F - np.pi**2/6*mu*M**2/p_F**3*T**2 - 7*np.pi**4/120*M**2*(4*mu**2+M**2)/p_F**7*T**4 )
     
     conditionsdPdB = [ n_max == 0, n_max == 1 ]
     choicesdPdB = [ 0, dPdB0 ]
