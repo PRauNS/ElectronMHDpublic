@@ -157,7 +157,7 @@ def Omega_xyLowTFixedT(eB,mu,M,T,n_max):
                                                                          - 3*MagM1**6*(12*M**4+8*M**2*eB+3*eB**2)
                                                                          + 8*mu**6*(3*M**4+4*M**2*eB+2*eB**2)
                                                                          - 28*mu**4*MagM1**2*(3*M**4+4*M**2*eB+2*eB**2) )*InvMagM1**8*InvE_F1**7 )
-                         + T**2*mu/6*( (npr*2*InvE_Fnpr**3 - InvE_F1**3) + 0.5*( (2*(mu**2-M**2)-eB*npr)*InvE_Fnpr**5*npr + (2*(mu**2-M**2)-eB)*InvE_F1**5 )
+                         + T**2*mu/6*( (npr**2*InvE_Fnpr**3 - InvE_F1**3) + 0.5*( (2*(mu**2-M**2)-eB*npr)*InvE_Fnpr**5*npr + (2*(mu**2-M**2)-eB)*InvE_F1**5 )
                                                       + B_2/2*( ( 2*M**4-(eB*npr)**2+4*eB*npr*mu**2+2*mu**4-4*M**2*(eB*npr+mu**2) )*InvE_Fnpr**7 
                                                                - ( 2*M**4-(eB)**2+4*eB*mu**2+2*mu**4-4*M**2*(eB+mu**2) )*InvE_F1**7) ) )
     d2PdBdmuTemp = ( p_F/(2*np.pi**2) + 1/(np.pi*np.pi)*( npr*E_Fnpr - E_F1 )
